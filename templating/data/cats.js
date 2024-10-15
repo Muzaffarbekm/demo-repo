@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 export const cats = [
+=======
+const cats = [
+>>>>>>> upstream/main
     {
         name: "Jiji",
         color: "black",
@@ -17,5 +21,9 @@ export const cats = [
         human: "Calvin",
         image: "images/hobbes.png"
     },
+<<<<<<< HEAD
 ];
 
+=======
+];
+>>>>>>> upstream/main

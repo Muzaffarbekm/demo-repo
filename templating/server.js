@@ -1,7 +1,10 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+<<<<<<< HEAD
 import { cats } from './data/cats.js'
+=======
+>>>>>>> upstream/main
 // todo: import cats data
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,6 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // todo: invoke the static middle ware
+<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, 'public')));
 
 // todo: set up view engine for ejs template
@@ -38,4 +42,16 @@ app.get("/cats", (req,resp) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
     
+=======
+
+// todo: set up view engine for ejs template
+
+
+// todo: fill in any paths
+
+// todo: fill in any views
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+>>>>>>> upstream/main
 });
