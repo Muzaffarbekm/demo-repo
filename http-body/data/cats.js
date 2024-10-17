@@ -38,9 +38,31 @@ const getCat = (id) => {
 };
 
 const createCat = (data) => {
+    const newCat = {
+        id: nextId(),
+        ...data
+    };
+    cats.push(newCat);
+    return newCat; // Return the entire cat object, not just the ID
 };
 
+
 const updateCat = (id, data) => {
+    let catToUpdate = cats.find(cat => cat.id === id)
+    cats = cats.map(cat => {
+        if(cat.id !== id){
+            return cat
+        }
+
+        let updatedCat = {
+            ...catToUpdate,
+            ...data
+        }
+        return updateCat;
+    })
+
+    let updateCat = cats.find(cat => cat.id === id);
+    return updateCat;
 };
 
 const deleteCat = (id) => {
