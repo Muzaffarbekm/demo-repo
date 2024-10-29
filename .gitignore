@@ -1,7 +1,12 @@
 complete/
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
 .DS_Store
 =======
 node_modules
+>>>>>>> upstream/main
+=======
+node_modules
+.env
 >>>>>>> upstream/main
