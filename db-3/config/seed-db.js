@@ -17,19 +17,20 @@ const createTables = async () => {
     try {
         console.log('creating cats and toys...');
         const createQuery = `
-            CREATE TABLE IF NOT EXISTS cats (
-                id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                name TEXT NOT NULL,
-                color TEXT NOT NULL,
-                human TEXT NOT NULL,
-                photo TEXT
-            );
-            CREATE TABLE IF NOT EXISTS toys (
-                id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-
-                
-            );
-        `;
+        CREATE TABLE IF NOT EXISTS cats (
+            id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+            name TEXT NOT NULL,
+            color TEXT NOT NULL,
+            human TEXT NOT NULL,
+            photo TEXT
+        );
+        CREATE TABLE IF NOT EXISTS toys (
+            id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+            name TEXT NOT NULL,
+            cat_id INT NOT NULL,
+            FOREIGN KEY (cat_id) REFERENCES cats(id)
+        );
+    `;
         await pool.query(createQuery);
         console.log('created cats and toys');
 
